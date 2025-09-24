@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name        Reddit NSFW Unblocker
-// @namespace   8mpty Script
+// @namespace   8mpty Reddit Script
 // @match        *://*.reddit.com/r/*
 // @match        *://*.reddit.com/r/*
 // @match        *://*.reddit.com/user/*
@@ -11,6 +11,12 @@
 // @author      8mpty
 // @description Unblurs Reddits NSFW contents on web browsers and removes login requirements
 // ==/UserScript==
+
+/**
+ * Credits
+ * https://github.com/8mpty/reddit-nsfw-unblocker
+ * https://www.reddit.com/r/mobileweb/comments/kfws4i/comment/m9lzsgu/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button
+ */
 
 unblock();
 
@@ -103,7 +109,7 @@ function unblock() {
 var contentObserver = new MutationObserver(function(mutations) {
     for (let mutation of mutations) {
         for (let node of mutation.addedNodes) {
-            if (node.nodeType === 1) { // Element node
+            if (node.nodeType === 1) {
                 if (node.tagName && (
                     node.tagName.toLowerCase().includes('xpromo') ||
                     node.tagName.toLowerCase().includes('nsfw') ||
