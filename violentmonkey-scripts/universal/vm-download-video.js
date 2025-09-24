@@ -2,6 +2,8 @@
 // @name        Univeral Video Download Button
 // @namespace   8mpty Universal Script
 // @match       *://*/*
+// @exclude     *://*.youtube.com/*
+// @exclude     *://*.twitch.tv/*
 // @grant       none
 // @version     1.0
 // @author      8mpty
